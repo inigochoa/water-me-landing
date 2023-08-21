@@ -1,0 +1,35 @@
+{
+  "name": "water-me-landing",
+  "version": "0.0.1",
+  "description": "",
+  "author": {
+    "name": "Iñigo Ochoa",
+    "email": "inigochoa@gmail.com",
+    "url": "https://inigochoa.me",
+    "github": "inigochoa",
+    "twitter": "inigochoa"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "parcel": "^2.9.3",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-reporter-static-files-copy": "^1.5.2",
+    "parcel-transformer-google-fonts": "^0.1.4",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3"
+  },
+  "staticFiles": {
+    "staticPath": "./src/static"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "dev": "parcel src/**/*.html",
+    "prod": "parcel build src/**/*.html"
+  }
+}

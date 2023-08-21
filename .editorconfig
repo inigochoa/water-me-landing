@@ -1,0 +1,15 @@
+# Top-most EditorConfig file
+root = true
+
+# Default configuration for all files
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Configuration for CSS, JavaScript, and Markdown files
+[*.css, *.js, *.md]
+max_line_length = 100

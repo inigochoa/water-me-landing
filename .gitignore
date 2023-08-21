@@ -1,0 +1,21 @@
+# Environment variables file (if you use .env)
+.env
+
+# Editor-specific files
+.idea/
+.vscode/
+
+# Log files
+*.log
+
+# Mac OS specific files
+.DS_Store
+
+# Node.js / npm
+/node_modules
+
+# Output directory (dist) from the build process
+/dist
+
+# Parcel cache
+.parcel-cache
