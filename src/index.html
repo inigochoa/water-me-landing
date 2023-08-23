@@ -10,33 +10,232 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     >
-
     <title>Water Me 🪴</title>
     <meta
       name="description"
       content=""
     >
     <link
-      rel="preconnect"
+      href="./img/favicon.svg"
+      type="image/svg+xml"
+      rel="icon"
+    >
+    <link
+      crossorigin
       href="https://fonts.googleapis.com"
-      crossorigin
-    >
-    <link
       rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
     >
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      crossorigin
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     >
-
     <link
       href="./index.css"
       rel="stylesheet"
     >
   </head>
-  <body class="">
+  <body class="font-sans">
+    <header
+      class="bg-primary fixed h-26 text-black w-full z-10"
+      id="header"
+    >
+      <div class="flex h-full items-center justify-between max-w-content mx-auto px-heading">
+        <a
+          class="font-medium text-4.5xl text-secondary"
+          href="#"
+          title=""
+        >Water Me</a>
+
+        <button
+          class="bg-secondary hover:opacity-75 flex font-bold h-11 items-center justify-center leading-snug pointer px-4 rounded-3xl shadow-md text-center text-primary uppercase"
+          id="btn-call-to-action"
+          type="button"
+        >Get the app</button>
+      </div>
+    </header>
+
+    <main class="pt-26">
+      <!-- HERO -->
+      <section
+        class="bg-primary flex gap-20 items-center justify-center section-border-b text-white"
+        style="--border-b-desktop: url(/src/img/section-border-b-desktop.svg); --border-b-mobile: url(/src/img/section-border-b-mobile.svg);"
+      >
+        <div class="flex flex-col items-center max-w-xl text-center w-full">
+          <h1 class="font-bold my-8 text-6xl">Lorem ipsum dolor sit amet</h1>
+          <p class="font-light mb-3 text-xl">Lorem ipsum dolor sit amet consectetur</p>
+        </div>
+
+        <div class="max-w-xs w-full">
+          <picture>
+            <source
+              srcset="./img/screenshot-hero.png?as=avif&width=350"
+              type="image/avif"
+            />
+            <source
+              srcset="./img/screenshot-hero.png?as=webp&width=350"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/screenshot-hero.png?width=350"
+              type="image/png"
+            />
+            <img
+              alt="Hero image"
+              decoding="async"
+              loading="lazy"
+              src="./img/screenshot-hero.png?width=200"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="py-12 text-black">
+        <h2 class="font-bold px-heading text-4.25xl text-center w-full">Top features and more</h2>
+
+        <div class="flex gap-56 items-center justify-center text-sm">
+          <div class="max-w-xs relative w-full">
+            <picture>
+              <source
+                srcset="./img/screenshot-features-1.png?as=avif&width=350"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/screenshot-features-1.png?as=webp&width=350"
+                type="image/webp"
+              />
+              <source
+                srcset="./img/screenshot-features-1.png?width=350"
+                type="image/png"
+              />
+              <img
+                alt="Hero image"
+                decoding="async"
+                loading="lazy"
+                src="./img/screenshot-features-1.png?width=200"
+              />
+            </picture>
+
+            <span class="bg-red-500 feature-pill -left-5 text-white top-44">Feature 1</span>
+            <span class="bg-blue-400 feature-pill -right-4 top-64 text-white">Feature 2</span>
+            <span class="bg-yellow-300 feature-pill -left-5 bottom-28">Feature 3</span>
+          </div>
+
+          <div class="max-w-xs relative w-full">
+            <picture>
+              <source
+                srcset="./img/screenshot-features-2.png?as=avif&width=350"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/screenshot-features-2.png?as=webp&width=350"
+                type="image/webp"
+              />
+              <source
+                srcset="./img/screenshot-features-2.png?width=350"
+                type="image/png"
+              />
+              <img
+                alt="Hero image"
+                decoding="async"
+                loading="lazy"
+                src="./img/screenshot-features-2.png?width=200"
+              />
+            </picture>
+
+            <span class="bg-orange-500 feature-pill -right-4 text-white top-30">Feature 4</span>
+            <span class="bg-lime-600 feature-pill -left-5 top-36 text-white">Feature 5</span>
+            <span class="bg-pink-600 feature-pill -left-5 bottom-44 text-white">Feature 6</span>
+            <span class="bg-violet-700 feature-pill -right-4 bottom-32 text-white">Feature 7</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALL TO ACTION -->
+      <section
+        class="bg-primary flex flex-col items-center justify-center -mb-17 min-h-170 pb-17 section-border-t text-center text-white"
+        id="call-to-action"
+        style="--border-t-desktop: url(/src/img/section-border-t-desktop.svg); --border-t-mobile: url(/src/img/section-border-t-mobile.svg);"
+      >
+        <h2 class="font-bold mb-3 mt-2 text-4.25xl">Download the app</h2>
+        <p class="font-light mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <div class="flex gap-16 justify-center mt-8">
+          <a
+            href="https://f-droid.org/packages/ch.abertschi.waterme.water_me/"
+            rel="noopener"
+            target="_blank"
+            title="Get it on F-Droid"
+          >
+            <picture>
+              <source
+                srcset="./img/get-it-on-f-droid.png?as=avif&height=80"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/get-it-on-f-droid.png?as=webp&height=80"
+                type="image/webp"
+              />
+              <img
+                alt="Get it on F-Droid"
+                decoding="async"
+                loading="lazy"
+                src="./img/get-it-on-f-droid.png?height=80"
+              />
+            </picture>
+          </a>
+
+          <a
+            href="https://github.com/abertschi/water-me"
+            rel="noopener"
+            target="_blank"
+            title="Get it on GitHub"
+          >
+            <picture>
+              <source
+                srcset="./img/get-it-on-github.png?as=avif&height=80"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/get-it-on-github.png?as=webp&height=80"
+                type="image/webp"
+              />
+              <img
+                alt="Get it on GitHub"
+                decoding="async"
+                loading="lazy"
+                src="./img/get-it-on-github.png?height=80"
+              />
+            </picture>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="footer-border-t"
+      style="--border-t: url(/src/img/footer-border-t.svg);"
+    >
+      <div class="flex flex-wrap gap-y-6 max-w-content mx-auto pt-25 px-heading">
+        <p class="basis-1/2 grow shrink">&copy; 2023 Andrin Bertschi, all rights reserved</p>
+
+        <ul class="basis-1/2 flex gap-4 grow justify-end shrink">
+          <li class="">
+            <a
+              class="hover:underline"
+              href="privacy-policy.html"
+              title=""
+            >Privacy policy</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
     <script
       defer
       src="./index.js"
