@@ -33,6 +33,6 @@
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "parcel src/**/*.html --open",
-    "prod": "parcel build src/**/*.html"
+    "prod": "parcel build src/**/*.html --public-url ./"
   }
 }
