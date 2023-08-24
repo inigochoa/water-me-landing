@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  section {
+    @apply max-w-full mx-auto pb-6 px-heading w-full;
+  }
+
+  section.section-border-b {
+    border-image-slice: 0 0 120;
+    border-image-source: var(--border-b-mobile);
+    border-bottom-width: 7.5rem;
+
+    @apply bg-clip-padding border-b-transparent;
+
+    /* @screen lg {
+      border-image-slice: 0 0 74;
+      border-image-source: var(--border-b-desktop);
+      border-bottom-width: 4.625rem;
+    } */
+  }
+
+  section.section-border-t {
+    border-image-slice: 100 0 0;
+    border-image-source: var(--border-t-desktop);
+    border-top-width: 6.25rem;
+
+    @apply bg-clip-padding border-b-transparent;
+  }
+
+  footer.footer-border-t {
+    @apply max-w-full mx-auto pb-6 px-heading w-full;
+
+    border-image-slice: 68 0 0;
+    border-image-source: var(--border-t);
+    border-top-width: 4.25rem;
+
+    @apply bg-clip-padding border-b-transparent;
+  }
+}
+
+.feature-pill {
+  @apply absolute font-medium px-4 py-2 rounded-md shadow-md;
+}
