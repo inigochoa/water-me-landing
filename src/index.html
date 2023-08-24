@@ -31,7 +31,7 @@
       rel="preconnect"
     >
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     >
     <link
@@ -41,33 +41,29 @@
   </head>
   <body class="debug-screens font-sans">
     <header
-      class="bg-primary fixed h-26 text-black w-full z-10"
+      class="bg-primary fixed h-15 tablet:h-26 text-black w-full z-10"
       id="header"
     >
-      <div class="flex h-full items-center justify-between max-w-content mx-auto px-heading">
-        <a
-          class="font-medium text-4.5xl text-secondary"
-          href="#"
-          title=""
-        >Water Me</a>
+      <div class="flex h-full items-center justify-between max-w-content mx-auto px-4 tablet:px-heading">
+        <span class="font-medium text-3xl tablet:text-4.5xl text-secondary">Water Me</span>
 
         <button
-          class="bg-secondary hover:opacity-75 flex font-bold h-11 items-center justify-center leading-snug pointer px-4 rounded-3xl shadow-md text-center text-primary uppercase"
+          class="btn btn-secondary"
           id="btn-call-to-action"
           type="button"
         >Get the app</button>
       </div>
     </header>
 
-    <main class="pt-26">
+    <main class="pt-15 tablet:pt-26">
       <!-- HERO -->
       <section
-        class="bg-primary flex gap-20 items-center justify-center section-border-b text-white"
-        style="--border-b-desktop: url(/src/img/section-border-b-desktop.svg); --border-b-mobile: url(/src/img/section-border-b-mobile.svg);"
+        class="flex-col-reverse tablet:flex-row tablet:gap-16 laptop:gap-20 pt-0 section-border-b section-primary"
+        style="--border-b: url(/src/img/section-border-b.svg);"
       >
         <div class="flex flex-col items-center max-w-xl text-center w-full">
-          <h1 class="font-bold my-8 text-6xl">Lorem ipsum dolor sit amet</h1>
-          <p class="font-light mb-3 text-xl">Lorem ipsum dolor sit amet consectetur</p>
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <p>Lorem ipsum dolor sit amet consectetur</p>
         </div>
 
         <div class="max-w-xs w-full">
@@ -87,11 +83,11 @@
       </section>
 
       <!-- FEATURES -->
-      <section class="py-12 text-black">
-        <h2 class="font-bold px-heading text-4.25xl text-center w-full">Top features and more</h2>
+      <section>
+        <h2>Top features and more</h2>
 
-        <div class="flex gap-56 items-center justify-center text-sm">
-          <div class="max-w-xs relative w-full">
+        <div class="flex flex-col tablet:flex-row tablet:gap-16 laptop:gap-32 desktop:gap-56 items-center justify-center">
+          <div class="feature-card">
             <picture>
               <source
                 srcset="./img/screenshot-features-1.png?as=webp&width=350"
@@ -110,7 +106,7 @@
             <span class="bg-yellow-300 feature-pill -left-5 bottom-28">Feature 3</span>
           </div>
 
-          <div class="max-w-xs relative w-full">
+          <div class="feature-card">
             <picture>
               <source
                 srcset="./img/screenshot-features-2.png?as=webp&width=350"
@@ -134,14 +130,14 @@
 
       <!-- CALL TO ACTION -->
       <section
-        class="bg-primary flex flex-col items-center justify-center -mb-17 min-h-170 pb-17 section-border-t text-center text-white"
+        class="flex-col -mb-17 min-h-140 tablet:min-h-128 pb-24 tablet:pb-40 section-border-t section-primary"
         id="call-to-action"
-        style="--border-t-desktop: url(/src/img/section-border-t-desktop.svg); --border-t-mobile: url(/src/img/section-border-t-mobile.svg);"
+        style="--border-t: url(/src/img/section-border-t.svg);"
       >
-        <h2 class="font-bold mb-3 mt-2 text-4.25xl">Download the app</h2>
-        <p class="font-light mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2>Download the app</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <div class="flex gap-16 justify-center mt-8">
+        <div class="flex flex-col tablet:flex-row gap-8 tablet:gap-16 justify-center mt-4 tablet:mt-8">
           <a
             href="https://f-droid.org/packages/ch.abertschi.waterme.water_me/"
             rel="noopener"
@@ -189,13 +185,12 @@
       class="footer-border-t"
       style="--border-t: url(/src/img/footer-border-t.svg);"
     >
-      <div class="flex flex-wrap gap-y-6 max-w-content mx-auto pt-25 px-heading">
-        <p class="basis-1/2 grow shrink">&copy; 2023 Andrin Bertschi, all rights reserved</p>
+      <div class="flex flex-col-reverse tablet:flex-row flex-wrap max-tablet:gap-y-6 max-w-content mx-auto pt-16 tablet:pt-25 px-heading">
+        <p class="footer-element">&copy; 2023 Andrin Bertschi, all rights reserved</p>
 
-        <ul class="basis-1/2 flex gap-4 grow justify-end shrink">
+        <ul class="flex footer-element gap-4 justify-center tablet:justify-end">
           <li class="">
             <a
-              class="hover:underline"
               href="privacy-policy.html"
               title=""
             >Privacy policy</a>
