@@ -24,7 +24,8 @@
     "parcel-transformer-google-fonts": "^0.1.4",
     "postcss": "^8.4.28",
     "sharp": "^0.31.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-debug-screens": "^2.2.1"
   },
   "staticFiles": {
     "staticPath": "./src/static"
