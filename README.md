@@ -1,35 +1,38 @@
-# Project Name
+# Water Me landing
 
-This is the README file for the "Project Name" project.
+This is the README file for the "Water Me landing" project.
 
 ## Description
 
-This is a brief description of the project and what it does. You can include
-information about the purpose of the project, main features, and any other
-relevant details.
+This is the landing page for [Water Me], a open source Android app to remind you
+to water your plants.
 
 ## Installation
 
-Here, provide instructions on how to install and set up the project. You can
-include steps on how to clone the repository, install dependencies, and any
-other necessary configuration.
+Installation is done with yarn:
 
 ```bash
-git clone https://github.com/username/project-name.git
-cd project-name
-npm install
+git clone https://github.com/inigochoa/water-me-landing.git
+cd water-me-landing
+yarn
 ```
 
-Usage
+## Usage
 
-Explain how to use the project and how to interact with it. Provide code
-examples or commands to demonstrate how the project works.
+### Development
 
-```javascript
-// Example code
-const exampleFunction = () => {
-  console.log('Hello, World!');
-};
+To run the project in development mode, run:
+
+```bash
+yarn dev
+```
+
+### Production
+
+To build the project for production, run:
+
+```bash
+yarn prod
 ```
 
 ## Contribution
@@ -49,10 +52,11 @@ This project is licensed under the [MIT License].
 ## Contact
 
 If you have any questions or concerns about the project, you can contact me via
-[your email] or your [GitHub account].
+[inigochoa@gmail.com] or my [GitHub account].
 
 Thank you for your interest in the project!
 
+[Water Me]: https://github.com/abertschi/water-me
 [MIT License]: LICENSE.md
-[your email]: mailto:email@email.com
-[GitHub account]: https://github.com/username
+[inigochoa@gmail.com]: mailto:inigochoa@gmail.com
+[GitHub account]: https://github.com/inigochoa
