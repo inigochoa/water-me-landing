@@ -1,0 +1,39 @@
+---
+import SectionCallToActionItem from './SectionCallToActionItem.astro';
+import getItOnFDroid from '../images/get-it-on-f-droid.png';
+import getItOnGitHub from '../images/get-it-on-github.png';
+---
+
+<section
+  class="flex-col -mb-17 min-h-140 tablet:min-h-128 pb-24 tablet:pb-40 section-primary text-white"
+  id="call-to-action"
+  style="--border-t: url(/section-border-t.svg);"
+>
+  <h2>Download the app</h2>
+
+  <div class="flex flex-col tablet:flex-row gap-8 tablet:gap-16 justify-center mt-4 tablet:mt-8">
+    <SectionCallToActionItem
+      alt="Get it on F-Droid"
+      href="https://f-droid.org/packages/ch.abertschi.waterme.water_me/"
+      src={getItOnFDroid}
+      title="Get it on F-Droid"
+    />
+
+    <SectionCallToActionItem
+      alt="Get it on GitHub"
+      href="https://github.com/abertschi/water-me"
+      src={getItOnGitHub}
+      title="Get it on GitHub"
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    border-image-slice: 86 0 0;
+    border-image-source: var(--border-t);
+    border-top-width: 5.375rem;
+
+    @apply bg-clip-padding border-b-transparent;
+  }
+</style>

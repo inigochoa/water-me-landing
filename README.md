@@ -32,7 +32,7 @@ yarn dev
 To build the project for production, run:
 
 ```bash
-yarn prod
+yarn build
 ```
 
 ## Contribution

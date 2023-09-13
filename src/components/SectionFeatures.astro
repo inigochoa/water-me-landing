@@ -1,0 +1,46 @@
+---
+import SectionFeaturesCard from './SectionFeaturesCard.astro';
+import SectionFeaturesCardPill from './SectionFeaturesCardPill.astro';
+import features1Image from '../images/screenshot-features-1.png';
+import features2Image from '../images/screenshot-features-2.png';
+---
+
+<section>
+  <h2>Top features</h2>
+
+  <div class="flex flex-col tablet:flex-row tablet:gap-16 laptop:gap-32 desktop:gap-56 items-center justify-center">
+    <SectionFeaturesCard src={features1Image}>
+      <SectionFeaturesCardPill
+        class="bg-red-500 feature-pill left-0 tablet:-left-20 desktop:-left-36 text-white top-44"
+        text="Customizable Watering Schedule"
+      />
+      <SectionFeaturesCardPill
+        class="bg-blue-400 feature-pill right-0 tablet:-right-20 desktop:-right-36 top-64 text-white"
+        text="Create Pictures, add Plant Details"
+      />
+      <SectionFeaturesCardPill
+        class="bg-yellow-300 feature-pill left:0 tablet:-left-20 bottom-28"
+        text="Notification Reminders"
+      />
+    </SectionFeaturesCard>
+
+    <SectionFeaturesCard src={features2Image}>
+      <SectionFeaturesCardPill
+        class="bg-orange-500 feature-pill right-0 tablet:-right-12 text-white top-30"
+        text="No Remote Entity"
+      />
+      <SectionFeaturesCardPill
+        class="bg-lime-600 feature-pill left-0 tablet:-left-14 top-36 text-white"
+        text="Import and Export"
+      />
+      <SectionFeaturesCardPill
+        class="bg-pink-600 feature-pill left-0 tablet:-left-17 bottom-44 text-white"
+        text="Free and Open-Source"
+      />
+      <SectionFeaturesCardPill
+        class="bg-violet-700 feature-pill right-0 tablet:-right-14 bottom-32 text-white"
+        text="Runs on Android"
+      />
+    </SectionFeaturesCard>
+  </div>
+</section>
