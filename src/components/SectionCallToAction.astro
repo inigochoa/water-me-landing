@@ -1,13 +1,15 @@
 ---
 import SectionCallToActionItem from './SectionCallToActionItem.astro';
+import borderImage from '../images/section-border-t.svg';
 import getItOnFDroid from '../images/get-it-on-f-droid.png';
 import getItOnGitHub from '../images/get-it-on-github.png';
+
+const border = `url("${borderImage.src}")`
 ---
 
 <section
   class="flex-col -mb-17 min-h-140 tablet:min-h-128 pb-24 tablet:pb-40 section-primary text-white"
   id="call-to-action"
-  style="--border-t: url(/section-border-t.svg);"
 >
   <h2>Download the app</h2>
 
@@ -28,10 +30,10 @@ import getItOnGitHub from '../images/get-it-on-github.png';
   </div>
 </section>
 
-<style>
+<style define:vars={{ border }}>
   section {
     border-image-slice: 86 0 0;
-    border-image-source: var(--border-t);
+    border-image-source: var(--border);
     border-top-width: 5.375rem;
 
     @apply bg-clip-padding border-b-transparent;

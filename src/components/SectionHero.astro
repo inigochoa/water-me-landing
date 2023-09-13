@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets';
+import borderImage from '../images/section-border-b.svg';
 import heroImage from '../images/screenshot-hero.png';
+
+const border = `url("${borderImage.src}")`
 ---
 
-<section
-  class="flex-col-reverse tablet:flex-row tablet:gap-16 laptop:gap-20 pt-0 section-primary text-white"
-  style="--border-b: url(/section-border-b.svg);"
->
+<section class="flex-col-reverse tablet:flex-row tablet:gap-16 laptop:gap-20 pt-0 section-primary text-white">
   <div class="flex flex-col items-center max-w-xl text-center w-full">
     <h1>Keep your plants happy and healthy</h1>
     <p>Water me is a plant watering reminder app. It's simple, open source, and it respects your privacy. No ads, no tracking, no accounts – just pure plant care!</p>
@@ -21,10 +21,10 @@ import heroImage from '../images/screenshot-hero.png';
   </div>
 </section>
 
-<style>
+<style define:vars={{ border }}>
   section {
     border-image-slice: 0 0 74;
-    border-image-source: var(--border-b);
+    border-image-source: var(--border);
     border-bottom-width: 4.625rem;
 
     @apply bg-clip-padding border-b-transparent;
