@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	src: ImageMetadata;
+}
+
+const { src } = Astro.props;
+---
+
+<div>
+  <Image
+    alt=""
+    src={src}
+    width="350"
+  />
+
+  <slot />
+</div>
+
+<style>
+  div {
+    @apply max-w-xs relative w-full;
+  }
+</style>

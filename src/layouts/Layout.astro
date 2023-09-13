@@ -1,0 +1,76 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import TheHeader from '../components/TheHeader.astro';
+import TheFooter from '../components/TheFooter.astro';
+
+import '@fontsource/belleza';
+import '@fontsource/roboto';
+
+import '../styles/utils.css';
+
+interface Props {
+	description: string;
+	title: string;
+}
+
+const { description, title } = Astro.props;
+---
+
+<!doctype html>
+<html
+	class="overflow-x-hidden"
+	lang="en"
+>
+	<head>
+		<meta charset="UTF-8">
+		<meta
+			content="IE=edge"
+			http-equiv="X-UA-Compatible"
+		>
+		<meta
+			content="width=device-width, initial-scale=1.0"
+			name="viewport"
+		>
+		<title>{title} 🪴 Water Me</title>
+		<meta
+			content={description}
+			name="description"
+		>
+		<link
+			href="/favicon.svg"
+			type="image/svg+xml"
+			rel="icon"
+		>
+		<meta
+			content={Astro.generator}
+			name="generator"
+		>
+		<ViewTransitions />
+	</head>
+	<body class="debug-screens flex flex-col font-sans min-h-screen overflow-x-hidden selection:bg-secondary selection:text-black">
+		<TheHeader />
+
+		<main class="pt-15 tablet:pt-26">
+			<slot />
+		</main>
+
+		<TheFooter />
+	</body>
+</html>
+<style is:global>
+	section.section-primary {
+		@apply bg-primary flex items-center justify-center;
+	}
+
+	.btn {
+		@apply cursor-pointer flex font-bold h-9 tablet:h-11 items-center justify-center leading-snug px-4 rounded-3xl shadow-md text-center text-sm tablet:text-base uppercase;
+	}
+
+	.btn.btn-primary {
+		@apply bg-primary focus:brightness-150 hover:brightness-150 text-white;
+	}
+
+	.btn.btn-secondary {
+		@apply bg-secondary focus:opacity-75 hover:opacity-75 text-primary;
+	}
+</style>

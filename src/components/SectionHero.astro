@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../images/screenshot-hero.png';
+---
+
+<section
+  class="flex-col-reverse tablet:flex-row tablet:gap-16 laptop:gap-20 pt-0 section-primary text-white"
+  style="--border-b: url(/section-border-b.svg);"
+>
+  <div class="flex flex-col items-center max-w-xl text-center w-full">
+    <h1>Keep your plants happy and healthy</h1>
+    <p>Water me is a plant watering reminder app. It's simple, open source, and it respects your privacy. No ads, no tracking, no accounts – just pure plant care!</p>
+  </div>
+
+  <div class="max-w-xs w-full">
+    <Image
+      alt="hero image"
+      src={heroImage}
+      width="350"
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    border-image-slice: 0 0 74;
+    border-image-source: var(--border-b);
+    border-bottom-width: 4.625rem;
+
+    @apply bg-clip-padding border-b-transparent;
+  }
+</style>

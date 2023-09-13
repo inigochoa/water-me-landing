@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  section {
+    @apply max-w-full mx-auto py-12 tablet:py-16 px-heading w-full;
+  }
+
+  img {
+    @apply select-none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-center w-full;
+  }
+
+  h1 {
+    @apply my-4 tablet:my-8 text-4xl tablet:text-5xl laptop:text-6xl;
+  }
+
+  h2 {
+    @apply mb-3 mt-2 text-3.5xl desktop:text-4.25xl;
+  }
+
+  p {
+    @apply font-light mb-2 tablet:mb-3 tablet:text-lg laptop:text-xl;
+  }
+}

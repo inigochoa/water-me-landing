@@ -1,38 +1,21 @@
 {
-  "name": "water-me-landing",
+  "name": "water-me-landing-astro",
+  "type": "module",
   "version": "0.0.1",
-  "description": "",
-  "author": {
-    "name": "Iñigo Ochoa",
-    "email": "inigochoa@gmail.com",
-    "url": "https://inigochoa.me",
-    "github": "inigochoa",
-    "twitter": "inigochoa"
-  },
-  "homepage": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "gh-pages": "^6.0.0",
-    "parcel": "^2.9.3",
-    "parcel-reporter-clean-dist": "^1.0.4",
-    "parcel-reporter-static-files-copy": "^1.5.2",
-    "parcel-transformer-google-fonts": "^0.1.4",
-    "postcss": "^8.4.28",
-    "sharp": "^0.31.1",
-    "tailwindcss": "^3.3.3",
-    "tailwindcss-debug-screens": "^2.2.1"
-  },
-  "staticFiles": {
-    "staticPath": "./src/static"
-  },
   "scripts": {
-    "deploy": "gh-pages -d dist",
-    "dev": "parcel src/**/*.html --open",
-    "prod": "parcel build src/**/*.html --public-url ./"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.0",
+    "@fontsource/belleza": "^5.0.8",
+    "@fontsource/roboto": "^5.0.8",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^3.0.12",
+    "tailwindcss": "^3.0.24",
+    "tailwindcss-debug-screens": "^2.2.1"
   }
 }

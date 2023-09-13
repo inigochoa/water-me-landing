@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import logoImage from '../images/logo.png';
+---
+
+<header
+  class="bg-primary fixed h-15 tablet:h-26 text-black w-full z-20"
+  id="header"
+>
+  <div class="flex h-full items-center justify-between max-w-content mx-auto px-4 tablet:px-heading">
+    <a
+      class="flex font-logo font-medium gap-2 text-3xl tablet:text-4.25xl text-secondary"
+      href="/"
+      title="Go back to the home of Water Me"
+    ><Image
+      alt="hero image"
+      src={logoImage}
+      width="45"
+    /> Water Me</a>
+
+    <button
+      class="btn btn-secondary"
+      id="btn-call-to-action"
+      type="button"
+    >Get the app</button>
+  </div>
+</header>
+
+<script>
+  document.getElementById('btn-call-to-action').addEventListener('click', () => {
+    const top = document.getElementById('call-to-action').offsetTop;
+
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top,
+    });
+  });
+
+  window.onscroll = () => {
+    const header = document.getElementById('header');
+
+    switch (window.scrollY) {
+      case 0:
+        header.classList.remove('shadow-lg');
+        break;
+      default:
+        header.classList.add('shadow-lg');
+    }
+  }
+</script>

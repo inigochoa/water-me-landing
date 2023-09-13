@@ -1,0 +1,28 @@
+---
+import TheFooterLink from './TheFooterLink.astro';
+---
+
+<footer
+  class="bg-clip-padding border-b-transparent max-w-full mt-auto mx-auto pb-6 px-heading w-full"
+  style="--border-t: url(/footer-border-t.svg);"
+>
+  <div class="flex flex-col-reverse tablet:flex-row flex-wrap max-tablet:gap-y-6 max-w-content mx-auto pt-16 tablet:pt-25 px-heading">
+    <p class="footer-element">&copy; 2023 Andrin Bertschi, all rights reserved</p>
+
+    <ul class="flex footer-element gap-4 grow justify-center tablet:justify-end shrink text-sm laptop:text-base max-tablet:text-center">
+      <TheFooterLink
+        href="/privacy-policy"
+        text="Privacy policy"
+        title="Check the privacy policy"
+      />
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-image-slice: 68 0 0;
+    border-image-source: var(--border-t);
+    border-top-width: 4.25rem;
+  }
+</style>
