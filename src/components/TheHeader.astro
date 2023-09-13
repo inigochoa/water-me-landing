@@ -18,25 +18,15 @@ import logoImage from '../images/logo.png';
       width="45"
     /> Water Me</a>
 
-    <button
+    <a
       class="btn btn-secondary"
-      id="btn-call-to-action"
+      href="#call-to-action"
       type="button"
-    >Get the app</button>
+    >Get the app</a>
   </div>
 </header>
 
 <script>
-  document.getElementById('btn-call-to-action').addEventListener('click', () => {
-    const top = document.getElementById('call-to-action').offsetTop;
-
-    window.scroll({
-      behavior: 'smooth',
-      left: 0,
-      top,
-    });
-  });
-
   window.onscroll = () => {
     const header = document.getElementById('header');
 
