@@ -18,7 +18,12 @@ interface Props {
 }
 
 const { description, title } = Astro.props;
-const faviconURL = `${import.meta.env.BASE_URL}/favicon.svg`
+
+const seoTitle = '🪴 Water Me';
+const seoDescription = 'A simple, open source plant watering reminder app for Android';
+const faviconURL = `${import.meta.env.BASE_URL}/favicon.svg`;
+const TwitterImageURL = `${Astro.url.origin}${TwitterImage.src}`;
+const OGImageURL = `${Astro.url.origin}${OGImage.src}`;
 ---
 
 <!doctype html>
@@ -32,13 +37,16 @@ const faviconURL = `${import.meta.env.BASE_URL}/favicon.svg`
 			description={description}
       openGraph={{
         basic: {
-          image: OGImage.src,
-          title: title,
+          image: OGImageURL,
+          title: seoTitle,
           type: 'website',
         },
         image: {
           height: OGImage.height,
           width: OGImage.width,
+        },
+        optional: {
+          description: seoDescription,
         },
       }}
 			title={title}
@@ -46,9 +54,9 @@ const faviconURL = `${import.meta.env.BASE_URL}/favicon.svg`
       twitter={{
         card: 'summary_large_image',
         creator: '@andrinbertschi',
-        description: description,
-        image: TwitterImage.src,
-        title: title,
+        description: seoDescription,
+        image: TwitterImageURL,
+        title: seoTitle,
       }}
       extend={{
         link: [{
