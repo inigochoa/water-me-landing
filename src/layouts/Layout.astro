@@ -1,7 +1,11 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import { SEO } from 'astro-seo';
 import TheHeader from '../components/TheHeader.astro';
 import TheFooter from '../components/TheFooter.astro';
+
+import TwitterImage from '../images/seo-twitter.png';
+import OGImage from '../images/seo-og.png';
 
 import '@fontsource/belleza';
 import '@fontsource/roboto';
@@ -22,29 +26,51 @@ const faviconURL = `${import.meta.env.BASE_URL}/favicon.svg`
 	lang="en"
 >
 	<head>
-		<meta charset="UTF-8">
-		<meta
-			content="IE=edge"
-			http-equiv="X-UA-Compatible"
-		>
-		<meta
-			content="width=device-width, initial-scale=1.0"
-			name="viewport"
-		>
-		<title>{title} 🪴 Water Me</title>
-		<meta
-			content={description}
-			name="description"
-		>
-		<link
-			href={faviconURL}
-			type="image/svg+xml"
-			rel="icon"
-		>
-		<meta
-			content={Astro.generator}
-			name="generator"
-		>
+		<SEO
+      charset='UTF-8'
+			description={description}
+      openGraph={{
+        basic: {
+          image: OGImage.src,
+          title: title,
+          type: 'website',
+        },
+        image: {
+          height: OGImage.height,
+          width: OGImage.width,
+        },
+      }}
+			title={title}
+      titleTemplate='%s 🪴 Water Me'
+      twitter={{
+        card: 'summary_large_image',
+        creator: '@andrinbertschi',
+        description: description,
+        image: TwitterImage.src,
+        title: title,
+      }}
+      extend={{
+        link: [{
+          href: faviconURL,
+          type: 'image/svg+xml',
+          rel: 'icon',
+        }],
+        meta: [
+          {
+            content: Astro.generator,
+            name: 'generator',
+          },
+          {
+            content: 'IE=edge',
+            httpEquiv: 'X-UA-Compatible',
+          },
+          {
+            content: 'width=device-width, initial-scale=1.0',
+            name: 'viewport',
+          }
+        ],
+      }}
+    />
 		<ViewTransitions />
 	</head>
 	<body class="debug-screens flex flex-col font-sans min-h-screen overflow-x-hidden selection:bg-secondary selection:text-black">
